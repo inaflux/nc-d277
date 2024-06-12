@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="main-head">
+        <nav>
+            <h1 id="logo">North Carolina</h1>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="raleigh.html">Raleigh</a></li>
+                <li><a href="charlotte.html">Charlotte</a></li>
+                <li><a href="asheville.html">Asheville</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="contact">
+   
+    <h2>Contact Form</h2>
+    
+    <img src="images/flag-con.jpg" alt="picture of North Carolina Flag">
+    <form id="userForm" onsubmit="return validateEmails()">
+        <div class="form-box">
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" name="firstName" placeholder="Enter your first name" required>
+        </div>
+        <div class="form-box">
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" name="lastName" placeholder="Enter your last name" required>
+        </div>
+        <div class="form-box">
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+        </div>
+        <div class="form-box">
+            <label for="confirmEmail">Confirm Email Address:</label>
+            <input type="email" id="confirmEmail" name="confirmEmail" placeholder="Confirm your email address" required>
+        </div>
+        <div class="form-box">
+            <label for="question">Comments:</label>
+            <textarea id="question" name="question" placeholder="Enter your question" rows="4" required></textarea>
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+
+<script>
+    function validateEmails() {
+        var email = document.getElementById("email").value;
+        var confirmEmail = document.getElementById("confirmEmail").value;
+        
+        if (email !== confirmEmail) {
+            alert("Email addresses do not match. Please re-enter.");
+            return false;
+        }
+        return true;
+    }
+</script>
+    </section>
+
+    <div class="blurb">
+        <h2>We'd Love to Hear From You!</h2>
+        <h3>Whether you’re a resident, a visitor, or considering making North Carolina your new home, we’re here to assist you. Reach out with any questions, comments, or suggestions, and we’ll be happy to help.</h3>
+        <aside><div class="info">*Contact information about</div></aside>
+    </div>
+</section>
+    <footer>
+        <p>Copyright © 2024</p> 
+    </footer>
+</body>
+</html>
